@@ -1,0 +1,23 @@
+name: Run tests
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.18.1
+      - name: install Dependencies
+        run: npm ci
+      - name: calculate test coverage
+        run: |
+          npx c8 --all --report-dir=./coverage --reporter=lcov mocha
