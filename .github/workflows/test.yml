@@ -20,7 +20,7 @@ jobs:
         run: npm ci
       - name: calculate test coverage
         run: |
-          npx c8 --all --report-dir=./coverage --reporter=lcov mocha
+          npx c8 --all --report-dir=./coverage --reporter=lcov --exclude=./src/.internal mocha 
       - name: Coveralls
         uses: coverallsapp/github-action@v2
         with:
