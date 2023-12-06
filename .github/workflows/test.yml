@@ -18,6 +18,8 @@ jobs:
           node-version: 16.18.1
       - name: install Dependencies
         run: npm ci
+      - name: Run tests
+        run: npm test
       - name: calculate test coverage
         run: |
           npx c8 --all --report-dir=./coverage --reporter=lcov --exclude=./src/.internal mocha 
