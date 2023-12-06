@@ -34,7 +34,7 @@ jobs:
       - name: Ensure execute permission for c8
         run: chmod +x ./node_modules/.bin/c8
       - name: calculate test coverage
-        run: ./node_modules/.bin/c8 --all --report-dir=./coverage --reporter=lcov --exclude=./src/.internal mocha 
+        run: ./node_modules/.bin/c8 --all --report-dir=./coverage --reporter=lcov --exclude=./src/.internal ./node_modules/.bin/mocha 
       - name: Coveralls
         uses: coverallsapp/github-action@v2
         with:
