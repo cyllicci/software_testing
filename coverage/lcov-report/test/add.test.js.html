@@ -25,14 +25,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>34/34</span>
+                <span class='fraction'>60/60</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>8/8</span>
+                <span class='fraction'>13/13</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>34/34</span>
+                <span class='fraction'>60/60</span>
             </div>
         
             
@@ -96,7 +96,59 @@
 <a name='L31'></a><a href='#L31'>31</a>
 <a name='L32'></a><a href='#L32'>32</a>
 <a name='L33'></a><a href='#L33'>33</a>
-<a name='L34'></a><a href='#L34'>34</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -136,30 +188,56 @@ const expect = chai.expect
 &nbsp;
 &nbsp;
 describe("Add", () =&gt; {
- it("adds positive number to positive number", () =&gt;{
-     expect(add(2,6)).to.equal(8)
+ it("adds two positive integers", () =&gt;{
+   expect(add(2,6)).to.equal(8)
  });
 &nbsp;
- it("adds zero to positive number", () =&gt; {
-    expect(add(2,0)).to.equal(2)
-    expect(add(0,2)).to.equal(2)
+ it("adds two negative integers", () =&gt;{
+   expect(add(-2,-6)).to.equal(-8)
  });
 &nbsp;
- it("adds negative number to positive number", () =&gt; {
-    expect(add(-2,6)).to.equal(4)
-    expect(add(2,-6)).to.equal(-4)
+ it("adds zero to positive integer and to negative integer", () =&gt; {
+   expect(add(2,0)).to.equal(2)
+   expect(add(0,2)).to.equal(2)
+   expect(add(-2,0)).to.equal(-2)
+   expect(add(0,-2)).to.equal(-2)
  });
 &nbsp;
- it("adds zero and zero together", () =&gt; {
-    expect(add(0,0)).to.equal(0)
+ it("adds negative integer to positive integer", () =&gt; {
+   expect(add(-2,6)).to.equal(4)
+   expect(add(2,-6)).to.equal(-4)
  });
 &nbsp;
- it("adds floating numbers correctly", () =&gt; {
-    expect(add(2.5, 3.5)).to.equal(6.0)
+ it("adds two zeros together", () =&gt; {
+   expect(add(0,0)).to.equal(0)
  });
 &nbsp;
- it("takes string as input", () =&gt; {
-    expect(add("2",3)).to.equal(5)
+ it("adds two positive floating numbers correctly", () =&gt; {
+   expect(add(2.5, 3.5)).to.equal(6.0)
+ });
+&nbsp;
+ it("adds positive floating number correctly to zero", () =&gt; {
+   expect(add(2.5, 0)).to.equal(2.5)
+ });
+&nbsp;
+ it("adds negative floating number correctly to positive floating number", () =&gt; {
+   expect(add(-2.5, 3.5)).to.equal(1.0)
+ });
+&nbsp;
+ it("adds two floating numbers with different precision", () =&gt; {
+   expect(add(2.5,0.0001)).to.equal(2.5001)
+ });
+&nbsp;
+ it("works with maximum value", () =&gt; {
+   expect(add(Number.MAX_SAFE_INTEGER,1)).to.equal(Number.MAX_SAFE_INTEGER+1)
+   expect(add(Number.MAX_SAFE_INTEGER,-1)).to.equal(Number.MAX_SAFE_INTEGER-1)
+   expect(add(Number.MAX_SAFE_INTEGER,0)).to.equal(Number.MAX_SAFE_INTEGER+0)
+ });
+&nbsp;
+ it("works with minimum value", () =&gt; {
+   expect(add(Number.MIN_SAFE_INTEGER,1)).to.equal(Number.MIN_SAFE_INTEGER+1)
+   expect(add(Number.MIN_SAFE_INTEGER,-1)).to.equal(Number.MIN_SAFE_INTEGER-1)
+   expect(add(Number.MIN_SAFE_INTEGER,0)).to.equal(Number.MIN_SAFE_INTEGER+0)
  });
 &nbsp;
 })</pre></td></tr></table></pre>
@@ -169,7 +247,7 @@ describe("Add", () =&gt; {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-12-06T16:12:42.401Z
+                at 2023-12-06T17:44:33.802Z
             </div>
         <script src="../prettify.js"></script>
         <script>
