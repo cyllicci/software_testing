@@ -45,5 +45,10 @@ describe("filter", () => {
             { name: 'Orange', category: 'Fruits' }
         ])
         });
+    
+    it("should handle null value", () => {
+        const result = filter(null, ({ category }) => category === 'Fruits')
+        expect(result).to.deep.equal([])
+    });
 });
 
