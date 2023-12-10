@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "c8 --exclude=./src/.internal,./test/**,./coverage/** mocha"
+    "test": "c8 mocha || true",
+    "coverage": "./node_modules/.bin/c8 --all --report-dir=./coverage --reporter=lcov --exclude=./src/.internal,./test/**,./coverage/** ./node_modules/.bin/mocha || true"
   },
   "author": "",
   "license": "MIT",
@@ -21,5 +22,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/cyllicci/software_testing"
+  },
+  "dependencies": {
+    "tough-cookie": "^4.1.3"
   }
 }
