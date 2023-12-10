@@ -5,8 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "c8 --include=src/** --exclude=src/.internal/** mocha",
-    "coverage": "./node_modules/.bin/c8 --report-dir=./coverage --reporter=lcov --include=src/** --exclude=src/.internal/** ./node_modules/.bin/mocha || true"
+    "test": "c8 --include=src/** --all --exclude=src/.internal/** mocha",
+    "coverage": "./node_modules/.bin/c8 --all --report-dir=./coverage --reporter=lcov --include=src/** --exclude=src/.internal/** ./node_modules/.bin/mocha || true"
   },
   "author": "",
   "license": "MIT",
