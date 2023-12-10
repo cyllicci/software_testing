@@ -45,4 +45,11 @@ describe('map function', () => {
     expect(map([4, undefined, 8], squareOrZero)).to.have.same.members([16, 0, 64]);
   });
 
+  it('handle null value as input', () => {
+    function squareOrZero(n) {
+      return n ? n * n : 0;
+    }
+    expect(map(null, squareOrZero)).to.have.same.members([]);
+  });
+
 });
